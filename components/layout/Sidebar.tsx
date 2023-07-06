@@ -23,11 +23,6 @@ const Sidebar = () => {
       href: "/user/123",
       icon: FaUser,
     },
-    {
-      label: "Home",
-      href: "/",
-      icon: BsHouseFill,
-    },
   ];
   return (
     <div className="col-span-1 h-full pr-4 md:pr-6">
