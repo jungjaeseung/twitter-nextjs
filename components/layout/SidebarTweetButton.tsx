@@ -18,7 +18,7 @@ const SidebarTweetButton = () => {
     } else {
       formModal.onOpen();
     }
-  }, [loginModal, currentUser]);
+  }, [loginModal, currentUser, formModal]);
 
   return (
     <div onClick={onClick}>

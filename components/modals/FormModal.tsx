@@ -34,7 +34,7 @@ const FormModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [formModal, body]);
+  }, [formModal, body, mutatePosts]);
 
   const bodyContent = (
     <div className="px-5">
