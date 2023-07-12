@@ -3,14 +3,22 @@ import { useCallback } from "react";
 import { FaFeather } from "react-icons/fa";
 
 import useLoginModal from "@/hooks/useLoginModal";
+import useCurrentUser from "@/hooks/useCurrentUser";
+import useFormModal from "@/hooks/useFormModal";
 
 const SidebarTweetButton = () => {
-  const router = useRouter();
+  const { data: currentUser } = useCurrentUser();
+
   const loginModal = useLoginModal();
+  const formModal = useFormModal();
 
   const onClick = useCallback(() => {
-    loginModal.onOpen();
-  }, [loginModal]);
+    if (!currentUser) {
+      loginModal.onOpen();
+    } else {
+      formModal.onOpen();
+    }
+  }, [loginModal, currentUser]);
 
   return (
     <div onClick={onClick}>

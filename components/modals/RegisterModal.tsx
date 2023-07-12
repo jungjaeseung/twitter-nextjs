@@ -56,7 +56,7 @@ const RegisterModal = () => {
   }, [registerModal, email, password, username, name]);
 
   const bodyContent = (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 my-10">
       <Input
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
